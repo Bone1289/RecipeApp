@@ -1,16 +1,14 @@
-import { RecieptAPPPage } from './app.po';
+import { NewCliPage } from './app.po';
 
-describe('reciept-app App', () => {
-  let page: RecieptAPPPage;
+describe('new-cli App', () => {
+  let page: NewCliPage;
 
   beforeEach(() => {
-    page = new RecieptAPPPage();
+    page = new NewCliPage();
   });
 
-  it('should display welcome message', done => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    page.getParagraphText()
-      .then(msg => expect(msg).toEqual('Welcome to app!!'))
-      .then(done, done.fail);
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });
